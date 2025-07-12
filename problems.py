@@ -1164,17 +1164,16 @@ Constraints:
 s[i] is '(', or ')'.'''
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
-        stack = [-1]  # Initialize stack with base index for valid substrings
+        stack = [-1]  
         max_len = 0
 
         for i, char in enumerate(s):
             if char == '(':
                 stack.append(i)
             else:
-                stack.pop()  # Pop the last '(' index
+                stack.pop()  
                 if not stack:
-                    stack.append(i)  # Base index for next valid substring
+                    stack.append(i) 
                 else:
-                    max_len = max(max_len, i - stack[-1])  # Calculate current valid length
-
+                    max_len = max(max_len, i - stack[-1])  
         return max_len
