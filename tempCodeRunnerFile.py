@@ -1,6 +1,4 @@
-if x < y:
-    print("x is less than y")
- elif x > y:
-    print("x is greater than y")
-else:
-    print("x is equal to y")
+l = int(15)
+b = int(6)
+a = l * b
+print(a)
