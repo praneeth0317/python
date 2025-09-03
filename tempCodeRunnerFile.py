@@ -1,4 +1,2 @@
-l = int(15)
-b = int(6)
-a = l * b
-print(a)
+boolean_value = bool(1)
+print(boolean_value)

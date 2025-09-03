@@ -32,4 +32,5 @@ b = int(6)
 a = l * b
 print(a)
 
+print("Hello\nWorld!")
 
