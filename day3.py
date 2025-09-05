@@ -25,3 +25,29 @@ print(f"Is x not equal to y? {x != y}")
 boolean_value = bool(1)
 print(boolean_value)
 
+a = 17 
+b = 26.0
+print(type(a))
+print(type(b))
+
+m = 80
+print(float(m))
+q=26.69
+print(int(q)) 
+f = "3.14"
+print(int(float(f)))
+g = "hello"
+print(str(g))
+h = 100
+print(str(h))
+i = 0
+print(bool(i))
+j = 5
+print(bool(j))
+
+u = 7
+d = 2
+a = u/d
+print(a)
+print(type(a))
+
