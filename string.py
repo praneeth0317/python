@@ -4,9 +4,12 @@ double_quote = "Hello, World!"
 triple_quote = '''Hello, World!'''
 triple_double_quote = """Hello, World!"""
 # Strings can be concatenated using the + operator.
+single_quote = 'Hello, World!'
 greeting = single_quote + " How are you?"
+print(greeting)
 # Strings can be repeated using the * operator.
 echo = "Echo! " * 3
+print(echo)
 # Strings support indexing and slicing.
 first_char = single_quote[0]
 substring = single_quote[0:5]
