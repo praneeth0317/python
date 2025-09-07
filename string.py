@@ -41,9 +41,8 @@ is_member = "Hello" in single_quote
 words = single_quote.split()
 # Strings can be joined from lists using the join() method.
 joined = " ".join(words)
-# Strings can be stripped of whitespace using the strip() method.
-whitespace_str = "   Hello, World!   "
-stripped = whitespace_str.strip()
-# Strings can be checked for certain properties using methods like isalpha(), isdigit(), etc.
-is_alpha = "Hello".isalpha()    
-is_digit = "12345".isdigit()
+"""Characters are accessed using indexing with square brackets (str[index]), with zero-based indexing (first character at position 0).
+
+Negative indexing lets you access characters from the end; for example, str[-1] is the last character.
+
+Slicing lets you obtain substrings"""
