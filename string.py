@@ -46,3 +46,11 @@ joined = " ".join(words)
 Negative indexing lets you access characters from the end; for example, str[-1] is the last character.
 
 Slicing lets you obtain substrings"""
+x = " hey "
+print(x.rstrip())
+
+#slicing
+x = "Hello, World!"
+print(x[0:4])  
+print(x[:3])
+print(x[::-5])
