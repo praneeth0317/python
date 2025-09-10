@@ -39,3 +39,44 @@ print(p and q)
 print(p or q)
 # Logical NOT
 print(not p)
+
+#bitwise operators
+m = 5 
+n =6
+# Bitwise AND
+print(m & n) 
+# Bitwise OR
+print(m | n)
+# Bitwise NOT
+print(~m)
+# Bitwise XOR
+print(m ^ n)
+# Left Shift
+print(m << 1)
+# Right Shift
+print(m >> 1)
+
+# Assignment operators
+m = 10
+m += 1
+print(m)
+m -= 1
+print(m)
+m *= 2
+print(m)
+m /= 2
+print(m)
+m //= 2
+print(m)
+m **= 2
+print(m)
+m &= 2
+print(m)
+m |= 2
+print(m)
+m ^= 2
+print(m)
+m <<= 1
+print(m)
+m >>= 1
+print(m)
