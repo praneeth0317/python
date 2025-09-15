@@ -20,4 +20,8 @@ myset.discard("banana")
 "apple" in myset 
 print(myset)
 len(myset)
-
+# union
+a = {1,2,3}
+b = {3,4,5}
+c = a | b
+print(c)
