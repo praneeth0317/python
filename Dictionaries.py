@@ -20,4 +20,15 @@ my_dict.pop("job")
 print(my_dict)
 my_dict.clear()
 print(my_dict)
-del my_dict
+
+x = {}
+x['name']= 'jackson'
+x['age']=4
+x['age']=6
+print(x)
+x.pop('name')
+print(x)
+if 'name' in x:
+    print("Key exists")
+else:
+    print("Key does not exist")
