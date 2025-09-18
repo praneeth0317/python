@@ -32,3 +32,13 @@ if 'name' in x:
     print("Key exists")
 else:
     print("Key does not exist")
+
+
+def two_sum(nums, target):
+    lookup = {}  # value: index
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in lookup:
+            return [lookup[complement], i]
+        lookup[num] = i
+    return []  # If no solution (not needed as per constraints)
