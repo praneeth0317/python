@@ -28,3 +28,7 @@ if a > b: print("a is greater than b")
 a = 20
 b = 30
 print("a is greater than b") if a > b else print("a is less than b or a is equal to b")
+
+num = int(input("Enter a number: "))
+if num > 0:
+    print("The number is positive.")
