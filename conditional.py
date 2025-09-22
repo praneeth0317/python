@@ -90,4 +90,9 @@ if y != 0 or y % 2 != 0:
     print("The number is either non-zero or odd (or both).")
 if not (y > 0 and y % 2 == 0):
     print("The number is not a positive even number.")
-    
+
+t = int(input("enter a number:"))
+if t == int(t/2):
+    print("yes")
+else:
+    print("no")
