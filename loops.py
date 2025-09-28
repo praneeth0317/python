@@ -12,6 +12,5 @@ for i in range(1, 10, 2):
     print("Current value:", i)
 print("Loop with step finished")
 
-for i in range(0, 15, 3):
+for i in range(0, 15, 1):
     print("current value:", i)
-    print("next value:", i + 3)

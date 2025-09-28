@@ -1,3 +1,2 @@
-x = 4
-for i in range(1, 10, 2):
-    print("Current value:", i)
+for i in range(0, 15, 1):
+    print("current value:", i)
