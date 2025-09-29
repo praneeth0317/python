@@ -1,3 +1,4 @@
-l = ["bat", "ball", "glove"]
-for item in l:
-    print("Item:", item)
+t = (56, "name", 5.4)
+for i in t:
+    print(i)
+    

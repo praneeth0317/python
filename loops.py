@@ -17,3 +17,20 @@ for i in range(0, 15, 1):
 l = ["bat", "ball", "glove"]
 for item in l:
     print("Item:", item)
+
+for char in "hello":
+    print("Character:", char)
+
+x = "hey there"
+for _ in x:
+    print("Character:", _)
+
+t = (56, "name", 5.4)
+for i in t:
+    print(i)
+    
+count = 0
+for i in range(10):
+    count += 1
+print("Total count:", count)
+
