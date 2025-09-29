@@ -1,2 +1,3 @@
-for i in range(0, 15, 1):
-    print("current value:", i)
+l = ["bat", "ball", "glove"]
+for item in l:
+    print("Item:", item)

@@ -1,4 +1,7 @@
 # tuple
+#A tuple in Python is an ordered, 
+#immutable collection of items, allowing storage of multiple elements in a single variable. 
+#Tuples are created using parentheses () with elements separated by commas, and each tuple item can be of any data type
 my_tuple = (1, 2, 3)
 print(my_tuple)
 print(type(my_tuple))
