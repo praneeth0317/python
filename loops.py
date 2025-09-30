@@ -44,11 +44,15 @@ for key in d.keys():
     print("Key:", key)
 for value in d.values():
     print("Value:", value)
-for index, value in enumerate(l):
+'''for index, value in enumerate(l):
     print("Index:", index, "Value:", value)
 for index, char in enumerate("hello"):
     print("Index:", index, "Character:", char)
 for index, item in enumerate(t):
     print("Index:", index, "Item:", item)
 for index, (key, value) in enumerate(d.items()):
-    print("Index:", index, "Key:", key, "Value:", value)
+    print("Index:", index, "Key:", key, "Value:", value)'''
+
+l = ["games", "class", "break"]
+for i in range(len(l)):
+    print(l[i])
