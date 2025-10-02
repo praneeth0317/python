@@ -1,3 +1,3 @@
-l = ["games", "class", "break"]
-for i in range(len(l)):
-    print(l[i])
+N = 5
+for i in range(1, 11):
+    print(N * i)

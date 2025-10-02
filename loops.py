@@ -56,3 +56,12 @@ for index, (key, value) in enumerate(d.items()):
 l = ["games", "class", "break"]
 for i in range(len(l)):
     print(l[i])
+
+'given a number N need to print multiplication table'
+N = 5
+for i in range(1, 11):
+    print(N * i)
+
+def multiplication_table(N):
+    for i in range(1, 11):
+        print(N * i)
