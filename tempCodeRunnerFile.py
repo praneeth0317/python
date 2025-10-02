@@ -1,3 +1,4 @@
-N = 5
-for i in range(1, 11):
-    print(N * i)
+for i in range(15):
+    if i == 13:
+        break
+    print(i)

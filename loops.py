@@ -64,3 +64,11 @@ for i in range(1, 11):
 def multiplication_table(N):
     for i in range(1, 11):
         print(N * i)
+
+https://www.geeksforgeeks.org/python/python-for-loops/
+
+# break 
+for i in range(15):
+    if i == 13:
+        break
+    print(i)
