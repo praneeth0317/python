@@ -72,12 +72,3 @@ for i in range(15):
     if i == 13:
         break
     print(i)
-
-for index, value in enumerate(l):
-    print("Index:", index, "Value:", value)
-for index, char in enumerate("hello"):
-    print("Index:", index, "Character:", char)
-for index, item in enumerate(t):
-    print("Index:", index, "Item:", item)
-for index, (key, value) in enumerate(d.items()):
-    print("Index:", index, "Key:", key, "Value:", value)
