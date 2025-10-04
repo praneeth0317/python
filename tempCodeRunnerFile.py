@@ -1,4 +1,4 @@
-for i in range(15):
-    if i == 13:
+for i in range(10):
+    if i == 5:
         break
     print(i)
