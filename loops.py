@@ -106,3 +106,11 @@ for color in colors:
         break
 else:
     print("Target not found in the list.")
+
+result = ""
+for b in file_bytes_iterator:
+    if b == '\0':
+        break
+    result += b
+else:
+    raise ValueError("String is unterminated")
