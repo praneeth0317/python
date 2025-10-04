@@ -81,3 +81,15 @@ for i in range(2, num):
         break
 else:
     print(f"{num} is a prime number")
+
+# continue
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+print("Loop with continue finished")
+for i in range(1, 21):
+    if i % 3 == 0:
+        continue
+    print(i)
+print("Loop with continue finished")
