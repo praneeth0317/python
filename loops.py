@@ -114,3 +114,4 @@ for b in file_bytes_iterator:
     result += b
 else:
     raise ValueError("String is unterminated")
+print(result)
