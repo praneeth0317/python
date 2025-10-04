@@ -236,8 +236,9 @@ Constraints:
 1 <= s.length <= 104
 s consists of only English letters and spaces ' '.
 There will be at least one word in s.'''
-def lengthOfLastWord(s: str) -> int:
-    # Strip trailing spaces, then split by spaces
-    words = s.rstrip().split()
-    # Return length of the last word
-    return len(words[-1])
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        s = s.rstrip()
+        words = s.split(" ")
+        return len(words[-1])
+
