@@ -98,3 +98,11 @@ for i in range(1, 21):
         continue
     print(i)
 print("Loop with continue finished")
+colors = ["red", "blue", "green"]
+target = "yellow"
+for color in colors:
+    if color == target:
+        print("Found it!")
+        break
+else:
+    print("Target not found in the list.")
