@@ -107,12 +107,3 @@ for color in colors:
 else:
     print("Target not found in the list.")
 
-print("Loop with continue finished")
-colors = ["red", "blue", "green"]
-target = "yellow"
-for color in colors:
-    if color == target:
-        print("Found it!")
-        break
-else:
-    print("Target not found in the list.")
