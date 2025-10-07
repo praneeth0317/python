@@ -106,3 +106,9 @@ for color in colors:
         break
 else:
     print("Target not found in the list.")
+
+else:
+    print("Target not found in the list.")
+
+else:
+    print("Target not found in the list.")
