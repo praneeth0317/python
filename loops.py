@@ -106,3 +106,10 @@ for color in colors:
         break
 else:
     print("Target not found in the list.")
+
+count = 0
+while True:
+    print("Hello Geek")
+    count += 1
+    if count == 5:
+        break

@@ -1,9 +1,6 @@
-with open("yourfile.txt", "rb") as file:
-    file_bytes_iterator = iter(file.read())
-    
-    for b in file_bytes_iterator:
-        if b == 0:  # null byte check
-            break
-        # process byte b
-    else:
-        raise ValueError("String is unterminated")
+count = 0
+while True:
+    print("Hello Geek")
+    count += 1
+    if count == 5:
+        break
