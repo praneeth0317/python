@@ -113,11 +113,3 @@ while True:
     count += 1
     if count == 5:
         break
-count = 0
-while count < 5:
-    count += 1
-    if count == 3:
-        continue  # Skip printing on third iteration
-    print(count)
-else:
-    print("Loop ended naturally")
