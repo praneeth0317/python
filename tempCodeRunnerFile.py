@@ -1,6 +1,4 @@
-count = 0
-while True:
-    print("Hello Geek")
-    count += 1
-    if count == 5:
-        break
+for i in range(5):
+    print("Iteration:", i)
+print("Loop finished")
+ 
