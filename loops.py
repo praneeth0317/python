@@ -134,3 +134,6 @@ sum_numbers = 0
 for num in range(1, 101):
     sum_numbers += num
 print(sum_numbers)
+num = 7
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
