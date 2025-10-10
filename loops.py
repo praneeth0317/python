@@ -130,6 +130,3 @@ for num in numbers:
         continue
     if num % 5 == 0:
         print(num)
-list1 = [11, 12, 13, 14, 15]
-for i in range(len(list1)-1, -1, -1):
-    print(list1[i])
