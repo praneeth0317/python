@@ -136,7 +136,7 @@ if age >= 18:
     print("eligible to vote")
 else:
     print("not eligible to vote")
-'''ef check_voting_eligibility(age):
+'''def check_voting_eligibility(age):
     if age >= 18:
         print("eligible to vote")
     else:
