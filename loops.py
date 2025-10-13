@@ -150,6 +150,7 @@ my_dict = {"a": 1, "b": 2}
 for key in my_dict:
     print(key, my_dict[key])
 
+# enumerate is used for print data along with indexing 
 colors = ["red", "green", "blue"]
 for idx, color in enumerate(colors):
     print(idx, color)
