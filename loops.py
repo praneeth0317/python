@@ -148,4 +148,4 @@ for i in range(3):  # Checks eligibility for 3 people
 
 my_dict = {"a": 1, "b": 2}
 for key in my_dict:
-    print(key, my_dict)
+    print(key, my_dict[key])
