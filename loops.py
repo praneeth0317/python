@@ -146,3 +146,6 @@ for i in range(3):  # Checks eligibility for 3 people
     age = int(input("Enter age: "))
     check_voting_eligibility(age)'''
 
+my_dict = {"a": 1, "b": 2}
+for key in my_dict:
+    print(key, my_dict)
