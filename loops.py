@@ -157,7 +157,7 @@ for idx, color in enumerate(colors):
 
 #If you have two lists, zip() pairs the first element of each, then the second, and so on.
 #If the iterables are of different lengths, zip() stops at the shortest one
-'''names = ["Alice", "Bob"]
+names = ["Alice", "Bob"]
 scores = [85, 90]
 for name, score in zip(names, scores):
-    print(name, score)'''
+    print(name, score)
