@@ -154,3 +154,8 @@ for key in my_dict:
 colors = ["red", "green", "blue"]
 for idx, color in enumerate(colors):
     print(idx, color)
+
+names = ["Alice", "Bob"]
+scores = [85, 90]
+for name, score in zip(names, scores):
+    print(name, score)
