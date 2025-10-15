@@ -170,3 +170,9 @@ users = ["Alice", "Bob", "Charlie"]
 for user in users:
     print(f"Notification sent to {user}")
 
+items = ["laptop", "mouse", "keyboard", "monitor"]
+for item in items:
+    if item == "keyboard":
+        print("Keyboard found! Stopping search.")
+        break
+    print(f"Checking {item}...")
