@@ -161,3 +161,9 @@ names = ["Alice", "Bob"]
 scores = [85, 90]
 for name, score in zip(names, scores):
     print(name, score)
+
+for i in range (1,11):
+    if i == 5:
+        continue
+    print(i)
+    
