@@ -166,4 +166,6 @@ for i in range (1,11):
     if i == 5:
         continue
     print(i)
-    
+users = ["Alice", "Bob", "Charlie"]
+for user in users:
+    print(f"Notification sent to {user}")
