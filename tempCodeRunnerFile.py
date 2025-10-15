@@ -1,3 +1,8 @@
-users = ["Alice", "Bob", "Charlie"]
-for user in users:
-    print(f"Notification sent to {user}")
+password = "python123"
+user_input = input("Enter your password: ")
+
+while user_input != password:
+    print("Wrong password. Try again.")
+    user_input = input("Enter your password: ")
+
+print("Access granted.")
