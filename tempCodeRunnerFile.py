@@ -1,5 +1,9 @@
-sales = [1200, 0, 1550, -100, 1800]
-for amount in sales:
-    if amount <= 0:  # skip zero or negative entries
-        continue
-    print(f"Processing sale: ${amount}")
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n == 1 or n == 2:
+            return n
+        prevPrev, prev = 1, 2
+        for _ in range(3, n + 1):
+            curr = prevPrev + prev
+            prevPrev, prev = prev, curr
+        return curr
