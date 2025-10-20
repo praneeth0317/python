@@ -181,3 +181,13 @@ for amount in sales:
     if amount <= 0:  # skip zero or negative entries
         continue
     print(f"Processing sale: ${amount}")
+fruits = ["apple", "banana", "cherry"]
+
+# enumerate() yields (index, value) tuples
+for index, fruit in enumerate(fruits):
+    print(f"Fruit at index {index} is {fruit}")
+
+# Output:
+# Fruit at index 0 is apple
+# Fruit at index 1 is banana
+# Fruit at index 2 is cherry
