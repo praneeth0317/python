@@ -1,2 +1,5 @@
-for i in range(5):
-    print(i)
+N = 5
+for i in range(1, N + 1):
+    for j in range(i): 
+        print(i, end=" ")
+    print()
