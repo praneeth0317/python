@@ -198,4 +198,4 @@ for i in range (n):
     print()
 
 for i in range(5):
-    print(i, end="  ")
+    print(i)
