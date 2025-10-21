@@ -1,9 +1,4 @@
-class Solution:
-    def climbStairs(self, n: int) -> int:
-        if n == 1 or n == 2:
-            return n
-        prevPrev, prev = 1, 2
-        for _ in range(3, n + 1):
-            curr = prevPrev + prev
-            prevPrev, prev = prev, curr
-        return curr
+for i in range (1,5):
+    for j in range (1,5):
+        print("*", end="")
+    print()

@@ -186,3 +186,12 @@ fruits = ["apple", "banana", "cherry"]
 # enumerate() yields (index, value) tuples
 for index, fruit in enumerate(fruits):
     print(f"Fruit at index {index} is {fruit}")
+
+#****
+#****
+#****
+#****
+for i in range (1,5):
+    for j in range (1,5):
+        print("*", end="")
+    print()
