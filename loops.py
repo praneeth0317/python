@@ -200,9 +200,9 @@ for i in range (n):
 for i in range(5):
     print(i, end="")
 N = 5
-for i in range(0, N + 0):
+for i in range(1, N + 1):
     for j in range(i): 
-        print(i, end=" ")
+        print("*", end=" ")
     print()
 
 n = 5
