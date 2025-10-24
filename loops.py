@@ -226,12 +226,22 @@ for i in range(1,n):
             print(i-j+1,end=" ")
     print()
 
-
+#     *
+#    **
+#   ***
+#  ****
 n = 5
 for i in range(n):
     for j in range(i,n):
         print(" ",end="")
-        if i>=j:
-            for j in range(i+1,):
+    for j in range(i+1,):
                 print("*",end="")
+    print()
+
+N = 5
+for i in range(1, N + 1):
+    for j in range(i): 
+        print("",end=" ")
+    for j in range():
+        print((5-i)*"*",end="")
     print()
