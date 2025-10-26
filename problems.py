@@ -404,3 +404,21 @@ pattern contains only lower-case English letters.
 s contains only lowercase English letters and spaces ' '.
 s does not contain any leading or trailing spaces.
 All the words in s are separated by a single space.'''
+class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        words = s.split(' ')
+        if len(pattern) != len(words):
+            return False
+        pattern_map = {}
+        word_map = set()
+        for i in range(len(words)):
+            if pattern[i] in pattern_map:
+                if pattern_map[pattern[i]] != words[i]:
+                    return False
+                continue
+            elif words[i] in word_map:
+                return False
+            else:
+                pattern_map[pattern[i]] = words[i]
+                word_map.add(words[i])
+        return True
