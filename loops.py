@@ -245,3 +245,20 @@ for i in range(1, N + 1):
     for j in range():
         print((5-i)*"*",end="")
     print()
+#   1
+#  12
+# 123
+#1234
+n = 5
+for i in range(n):
+    for j in range(i,n):
+        print(" ",end="")
+    for j in range(i+1,):
+                print("*",end="")
+    print()
+
+for i in range(0,5):
+    for j in range(0,5):
+        if(j<=i):
+            print(j+1,end=" ")
+    print()
