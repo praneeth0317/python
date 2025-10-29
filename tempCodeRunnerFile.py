@@ -5,5 +5,5 @@ for i in range(n):
         print(" ",end="")
     for j in range(i+1):
                 if j<=i:
-                    print(i+1,end="")
+                    print(j+1,end="")
     print()
