@@ -1,9 +1,8 @@
-
-n = 5
-for i in range(n):
-    for j in range(i,n):
-        print(" ",end="")
-    for j in range(i+1):
-                if j<=i:
-                    print(j+1,end="")
+N = 5
+for i in range(1,5):
+    for j in range(1,5): 
+        print("",end=" ")
+    for j in range():
+        print((5-i)*"*",end="")
     print()
+#   1
