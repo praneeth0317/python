@@ -539,7 +539,6 @@ nums2.length == n
 -106 <= nums1[i], nums2[i] <= 106'''
 class Solution:
     def findMedianSortedArrays(self, nums1, nums2):
-        # Ensure nums1 is the smaller array
         if len(nums1) > len(nums2):
             nums1, nums2 = nums2, nums1
         m, n = len(nums1), len(nums2)
@@ -549,11 +548,10 @@ class Solution:
             i = (imin + imax) // 2
             j = half_len - i
             if i < m and nums2[j-1] > nums1[i]:
-                imin = i + 1  # i is too small
+                imin = i + 1  
             elif i > 0 and nums1[i-1] > nums2[j]:
-                imax = i - 1  # i is too big
+                imax = i - 1  
             else:
-                # i is perfect
                 if i == 0: max_of_left = nums2[j-1]
                 elif j == 0: max_of_left = nums1[i-1]
                 else: max_of_left = max(nums1[i-1], nums2[j-1])
