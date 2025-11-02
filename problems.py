@@ -561,3 +561,7 @@ class Solution:
                 elif j == n: min_of_right = nums1[i]
                 else: min_of_right = min(nums1[i], nums2[j])
                 return (max_of_left + min_of_right) / 2.0
+'''Given a string s, return the longest palindromic substring in s.
+Constraints:
+1 <= s.length <= 1000
+s consist of only digits and English letters.'''
