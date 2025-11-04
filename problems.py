@@ -620,3 +620,23 @@ class Solution:
 Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
 Constraints:
 -231 <= x <= 231 - 1'''
+class Solution:
+    def reverse(self, x: int) -> int:
+        INT_MAX = 2**31 - 1
+        INT_MIN = -2**31
+        
+        sign = -1 if x < 0 else 1
+        x_abs = abs(x)
+        reversed_num = 0
+        while x_abs != 0:
+            digit = x_abs % 10
+            x_abs //= 10
+            # Check for overflow before multiplying
+            if reversed_num > (INT_MAX - digit) // 10:
+                return 0
+            reversed_num = reversed_num * 10 + digit
+        
+        result = sign * reversed_num
+        if result < INT_MIN or result > INT_MAX:
+            return 0
+        return result
