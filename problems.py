@@ -631,7 +631,6 @@ class Solution:
         while x_abs != 0:
             digit = x_abs % 10
             x_abs //= 10
-            # Check for overflow before multiplying
             if reversed_num > (INT_MAX - digit) // 10:
                 return 0
             reversed_num = reversed_num * 10 + digit
