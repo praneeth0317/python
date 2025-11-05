@@ -656,22 +656,18 @@ class Solution:
         
         i = 0
         n = len(s)
-        # Step 1: Skip leading whitespaces
         while i < n and s[i] == ' ':
             i += 1
         
-        # Step 2: Check for sign
         sign = 1
         if i < n and (s[i] == '+' or s[i] == '-'):  
             if s[i] == '-':
                 sign = -1
             i += 1
         
-        # Step 3: Convert digits into integer
         result = 0
         while i < n and s[i].isdigit():
             digit = int(s[i])
-            # Check for overflow/underflow
             if result > (INT_MAX - digit) // 10:
                 return INT_MAX if sign == 1 else INT_MIN
             result = result * 10 + digit
