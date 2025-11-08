@@ -744,3 +744,21 @@ Only powers of 10 (I, X, C, M) can be appended consecutively at most 3 times to 
 Given an integer, convert it to a Roman numeral.
 Constraints:
 1 <= num <= 3999'''
+class Solution:
+    def intToRoman(self, num: int) -> str:
+        val = [
+            1000, 900, 500, 400,
+            100, 90, 50, 40,
+            10, 9, 5, 4, 1
+        ]
+        syms = [
+            "M", "CM", "D", "CD",
+            "C", "XC", "L", "XL",
+            "X", "IX", "V", "IV", "I"
+        ]
+        roman = []
+        for i in range(len(val)):
+            count = num // val[i]
+            roman.append(syms[i] * count)
+            num %= val[i]
+        return "".join(roman)
