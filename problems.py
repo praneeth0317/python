@@ -950,28 +950,27 @@ class ListNode:
         self.val = val
         self.next = next
 
-def mergeKLists(lists):
-    min_heap = []
-    # Initialize the heap with the head of each list
-    for i, node in enumerate(lists):
-        if node:
-            heapq.heappush(min_heap, (node.val, i, node))
+class Solution:
+    def mergeKLists(self, lists):
+        min_heap = []
+        for i, node in enumerate(lists):
+            if node:
+                heapq.heappush(min_heap, (node.val, i, node))
 
-    dummy = ListNode()
-    current = dummy
+        dummy = ListNode()
+        current = dummy
 
-    while min_heap:
-        # Pop the smallest item
-        val, i, node = heapq.heappop(min_heap)
-        current.next = node
-        current = current.next
-        # If there is another node in list, push it to the heap
-        if node.next:
-            heapq.heappush(min_heap, (node.next.val, i, node.next))
+        while min_heap:
+            val, i, node = heapq.heappop(min_heap)
+            current.next = node
+            current = current.next
+            if node.next:
+                heapq.heappush(min_heap, (node.next.val, i, node.next))
 
-    return dummy.next
+        return dummy.next
 
-# Helper to convert nested lists to linked lists for testing
+# Helper functions to build and print linked lists can remain outside the class.
+
 def build_lists(lists):
     result = []
     for l in lists:
@@ -983,7 +982,6 @@ def build_lists(lists):
         result.append(dummy.next)
     return result
 
-# Helper to print linked list as list
 def print_linked_list(node):
     res = []
     while node:
@@ -993,5 +991,6 @@ def print_linked_list(node):
 
 # Example usage:
 lists = build_lists([[1,4,5],[1,3,4],[2,6]])
-merged = mergeKLists(lists)
+solution = Solution()
+merged = solution.mergeKLists(lists)
 print(print_linked_list(merged))  # Output: [1,1,2,3,4,4,5,6]
