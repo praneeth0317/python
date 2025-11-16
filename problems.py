@@ -968,9 +968,6 @@ class Solution:
                 heapq.heappush(min_heap, (node.next.val, i, node.next))
 
         return dummy.next
-
-# Helper functions to build and print linked lists can remain outside the class.
-
 def build_lists(lists):
     result = []
     for l in lists:
