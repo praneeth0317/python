@@ -943,3 +943,55 @@ k == lists.length
 -104 <= lists[i][j] <= 104
 lists[i] is sorted in ascending order.
 The sum of lists[i].length will not exceed 104.'''
+import heapq
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def mergeKLists(lists):
+    min_heap = []
+    # Initialize the heap with the head of each list
+    for i, node in enumerate(lists):
+        if node:
+            heapq.heappush(min_heap, (node.val, i, node))
+
+    dummy = ListNode()
+    current = dummy
+
+    while min_heap:
+        # Pop the smallest item
+        val, i, node = heapq.heappop(min_heap)
+        current.next = node
+        current = current.next
+        # If there is another node in list, push it to the heap
+        if node.next:
+            heapq.heappush(min_heap, (node.next.val, i, node.next))
+
+    return dummy.next
+
+# Helper to convert nested lists to linked lists for testing
+def build_lists(lists):
+    result = []
+    for l in lists:
+        dummy = ListNode()
+        current = dummy
+        for val in l:
+            current.next = ListNode(val)
+            current = current.next
+        result.append(dummy.next)
+    return result
+
+# Helper to print linked list as list
+def print_linked_list(node):
+    res = []
+    while node:
+        res.append(node.val)
+        node = node.next
+    return res
+
+# Example usage:
+lists = build_lists([[1,4,5],[1,3,4],[2,6]])
+merged = mergeKLists(lists)
+print(print_linked_list(merged))  # Output: [1,1,2,3,4,4,5,6]
