@@ -988,9 +988,3 @@ def print_linked_list(node):
         res.append(node.val)
         node = node.next
     return res
-
-# Example usage:
-lists = build_lists([[1,4,5],[1,3,4],[2,6]])
-solution = Solution()
-merged = solution.mergeKLists(lists)
-print(print_linked_list(merged))  # Output: [1,1,2,3,4,4,5,6]
