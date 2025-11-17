@@ -990,3 +990,40 @@ def print_linked_list(node):
 Constraints:
 The number of nodes in the list is in the range [0, 100].
 0 <= Node.val <= 100'''
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    def swapPairs(self, head):
+        # Create a dummy node to simplify edge operations.
+        dummy = ListNode(-1)
+        dummy.next = head
+        prev = dummy
+
+        while prev.next and prev.next.next:
+            first = prev.next
+            second = prev.next.next
+
+            # Swapping
+            prev.next = second
+            first.next = second.next
+            second.next = first
+
+            # Move prev two nodes forward
+            prev = first
+
+        return dummy.next
+
+# Example usage:
+param_1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4))))
+result = Solution().swapPairs(param_1)
+
+# Function to print linked list for verification
+def print_list(node):
+    while node:
+        print(node.val, end=' ')
+        node = node.next
+
+print_list(result)
