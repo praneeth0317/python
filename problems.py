@@ -1018,7 +1018,6 @@ class Solution:
 # Example usage:
 param_1 = ListNode(1, ListNode(2, ListNode(3, ListNode(4))))
 result = Solution().swapPairs(param_1)
-# Function to print linked list for verification
 def print_list(node):
     while node:
         print(node.val, end=' ')
