@@ -1024,3 +1024,7 @@ def print_list(node):
         node = node.next
 
 print_list(result)
+#Example: A bank with branches in different cities uses Oracle DB at every location.
+#All databases have the same structure and are synchronized regularly.
+#. Heterogeneous Database
+#n a heterogeneous distributed data
