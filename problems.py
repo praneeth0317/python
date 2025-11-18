@@ -1032,3 +1032,33 @@ The number of nodes in the list is n.
 1 <= k <= n <= 5000
 0 <= Node.val <= 1000
 Follow-up: Can you solve the problem in O(1) extra memory space?'''
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
+        def getLength(node):
+            cnt = 0
+            while node:
+                cnt += 1
+                node = node.next
+            return cnt
+
+        length = getLength(head)
+        dummy = ListNode(0)
+        dummy.next = head
+        prev = dummy
+
+        while length >= k:
+            curr = prev.next
+            nex = curr.next
+            for _ in range(1, k):
+                curr.next = nex.next
+                nex.next = prev.next
+                prev.next = nex
+                nex = curr.next
+            prev = curr
+            length -= k
+        return dummy.next
