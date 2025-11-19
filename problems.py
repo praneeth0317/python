@@ -1069,3 +1069,27 @@ Note: Assume we are dealing with an environment that could only store integers w
 Constraints:
 -231 <= dividend, divisor <= 231 - 1
 divisor != 0'''
+class Solution:
+    def divide(self, dividend: int, divisor: int) -> int:
+        # Constants for overflow
+        INT_MAX = 2**31 - 1
+        INT_MIN = -2**31
+
+        # Handle overflow:
+        if dividend == INT_MIN and divisor == -1:
+            return INT_MAX
+
+        # Get sign of result
+        sign = -1 if (dividend < 0) != (divisor < 0) else 1
+
+        # Work with absolute values
+        a, b = abs(dividend), abs(divisor)
+        res = 0
+
+        # Build the quotient using subtraction and bit shifts
+        for i in range(31, -1, -1):
+            if (a >> i) >= b:
+                res += 1 << i
+                a -= b << i
+
+        return sign * res
