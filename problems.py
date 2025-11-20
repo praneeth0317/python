@@ -1097,3 +1097,36 @@ Constraints:
 1 <= words.length <= 5000
 1 <= words[i].length <= 30
 s and words[i] consist of lowercase English letters.'''
+from collections import Counter
+
+class Solution:
+    def findSubstring(self, s: str, words: list[str]) -> list[int]:
+        if not s or not words or len(words[0]) * len(words) > len(s):
+            return []
+        word_len = len(words[0])
+        words_count = len(words)
+        total_len = word_len * words_count
+        word_freq = Counter(words)
+        result = []
+
+        for i in range(word_len):  # handle all offsets within word length
+            left, right = i, i
+            cur_count = 0
+            window_freq = Counter()
+            while right + word_len <= len(s):
+                word = s[right:right + word_len]
+                right += word_len
+                if word in word_freq:
+                    window_freq[word] += 1
+                    cur_count += 1
+                    while window_freq[word] > word_freq[word]:
+                        window_freq[s[left:left+word_len]] -= 1
+                        left += word_len
+                        cur_count -= 1
+                    if cur_count == words_count:
+                        result.append(left)
+                else:
+                    window_freq.clear()
+                    cur_count = 0
+                    left = right
+        return result
