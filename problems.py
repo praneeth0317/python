@@ -1109,7 +1109,7 @@ class Solution:
         word_freq = Counter(words)
         result = []
 
-        for i in range(word_len):  # handle all offsets within word length
+        for i in range(word_len):  
             left, right = i, i
             cur_count = 0
             window_freq = Counter()
