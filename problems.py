@@ -1153,7 +1153,6 @@ class Solution:
             j = n - 1
             while nums[j] <= nums[i]:
                 j -= 1
-            # Step 4: Swap
             nums[i], nums[j] = nums[j], nums[i]
         left, right = i + 1, n - 1
         while left < right:
