@@ -1155,7 +1155,6 @@ class Solution:
                 j -= 1
             # Step 4: Swap
             nums[i], nums[j] = nums[j], nums[i]
-        # Step 5: Reverse the suffix
         left, right = i + 1, n - 1
         while left < right:
             nums[left], nums[right] = nums[right], nums[left]
