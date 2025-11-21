@@ -1145,11 +1145,9 @@ class Solution:
     def nextPermutation(self, nums: list[int]) -> None:
         n = len(nums)
         i = n - 2
-        # Step 1: Find first descending pair from the end
         while i >= 0 and nums[i] >= nums[i + 1]:
             i -= 1
         if i >= 0:
-            # Step 3: Find just-larger element to swap with
             j = n - 1
             while nums[j] <= nums[i]:
                 j -= 1
