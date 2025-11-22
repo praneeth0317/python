@@ -1157,8 +1157,24 @@ class Solution:
             nums[left], nums[right] = nums[right], nums[left]
             left += 1
             right -= 1
-            
+
 '''Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.
 Constraints:
 0 <= s.length <= 3 * 104
 s[i] is '(', or ')'.'''
+class Solution:
+    def longestValidParentheses(self, s: str) -> int:
+        stack = [-1]  # Initialize stack with base index for valid substrings
+        max_len = 0
+
+        for i, char in enumerate(s):
+            if char == '(':
+                stack.append(i)
+            else:
+                stack.pop()  # Pop the last '(' index
+                if not stack:
+                    stack.append(i)  # Base index for next valid substring
+                else:
+                    max_len = max(max_len, i - stack[-1])  # Calculate current valid length
+
+        return max_len
