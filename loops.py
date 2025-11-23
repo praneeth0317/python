@@ -305,14 +305,5 @@ for i in range(n):
 
 '''27 State the definition of a Virtual Private Cloud 
 Amazon EBS volumes are included as part of the backup of your instances into 
-e designed for use with Amazon Elastic Compute Cloud (Amazon EC2) 
-instances. 
-It provides persistent block-level storage volumes that can be attached to EC2 
-instances and used like hard drives on a physical server. 
-Amazon EBS enables you to create individual storage volumes and attach them 
-to an Amazon EC2 instance. Amazon EBS offers block-level storage, where its 
-volumes are automatically replicated within its Availability Zone. Amazon EBS 
-is designed to provide durable, detachable, block-level storage (which is like an 
-external hard drive) for your Amazon EC2 instances. Because they are directly 
-attached to the i
+
 '''
