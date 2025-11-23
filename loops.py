@@ -302,3 +302,4 @@ for i in range(n):
                 if j<=i:
                     print(j+1,end="")
     print()
+
