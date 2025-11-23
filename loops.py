@@ -303,7 +303,3 @@ for i in range(n):
                     print(j+1,end="")
     print()
 
-'''27 State the definition of a Virtual Private Cloud 
-Amazon EBS volumes are included as part of the backup of your instances into 
-
-'''
