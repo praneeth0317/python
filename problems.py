@@ -1203,7 +1203,6 @@ class Solution:
                     right = mid - 1
                 else:
                     left = mid + 1
-            # Right half is sorted
             else:
                 if nums[mid] < target <= nums[right]:
                     left = mid + 1
