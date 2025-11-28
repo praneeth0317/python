@@ -1239,4 +1239,3 @@ class Solution:
         start = findBound(True)
         end = findBound(False)
         return [start, end]
-    
