@@ -1342,3 +1342,24 @@ Run-length encoding (RLE) is a string compression method that works by replacing
 Given a positive integer n, return the nth element of the count-and-say sequence.
 Constraints:
 1 <= n <= 30'''
+class Solution:
+    def countAndSay(self, n: int) -> str:
+        s = "1"  # term 1
+
+        for _ in range(1, n):  # build up to term n
+            i = 0
+            next_s = ""
+
+            while i < len(s):
+                count = 1
+                # count how many times s[i] repeats
+                while i + 1 < len(s) and s[i] == s[i + 1]:
+                    i += 1
+                    count += 1
+                # append "count" + "digit"
+                next_s += str(count) + s[i]
+                i += 1
+
+            s = next_s
+
+        return s
