@@ -1369,3 +1369,28 @@ Constraints:
 2 <= candidates[i] <= 40
 All elements of candidates are distinct.
 1 <= target <= 40'''
+from typing import List
+
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        res = []
+
+        def dfs(i: int, cur: List[int], total: int) -> None:
+            # if total equals target, record the current combination
+            if total == target:
+                res.append(cur.copy())
+                return
+            # if total exceeds target or we ran out of candidates, stop
+            if total > target or i == len(candidates):
+                return
+
+            # choice 1: include candidates[i]
+            cur.append(candidates[i])
+            dfs(i, cur, total + candidates[i])  # stay at i to allow reuse
+            cur.pop()  # backtrack
+
+            # choice 2: skip candidates[i] and move forward
+            dfs(i + 1, cur, total)
+
+        dfs(0, [], 0)
+        return res
