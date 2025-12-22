@@ -1384,12 +1384,10 @@ class Solution:
             if total > target or i == len(candidates):
                 return
 
-            # choice 1: include candidates[i]
             cur.append(candidates[i])
-            dfs(i, cur, total + candidates[i])  # stay at i to allow reuse
-            cur.pop()  # backtrack
+            dfs(i, cur, total + candidates[i]) 
+            cur.pop()  
 
-            # choice 2: skip candidates[i] and move forward
             dfs(i + 1, cur, total)
 
         dfs(0, [], 0)
