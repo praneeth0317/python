@@ -1376,11 +1376,9 @@ class Solution:
         res = []
 
         def dfs(i: int, cur: List[int], total: int) -> None:
-            # if total equals target, record the current combination
             if total == target:
                 res.append(cur.copy())
                 return
-            # if total exceeds target or we ran out of candidates, stop
             if total > target or i == len(candidates):
                 return
 
