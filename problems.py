@@ -1390,3 +1390,43 @@ class Solution:
 
         dfs(0, [], 0)
         return res
+'''Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.
+Each number in candidates may only be used once in the combination.
+Note: The solution set must not contain duplicate combinations.
+Constraints:
+1 <= candidates.length <= 100
+1 <= candidates[i] <= 50
+1 <= target <= 30'''
+from typing import List
+
+class Solution:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+        candidates.sort()
+        res = []
+
+        def backtrack(start: int, path: List[int], remaining: int) -> None:
+            if remaining == 0:
+                res.append(path.copy())
+                return
+            if remaining < 0:
+                return
+
+            for i in range(start, len(candidates)):
+                if i > start and candidates[i] == candidates[i - 1]:
+                    continue
+
+                if candidates[i] > remaining:
+                    break
+
+                path.append(candidates[i])
+                backtrack(i + 1, path, remaining - candidates[i])
+                path.pop()
+
+        backtrack(0, [], target)
+        return res
+    
+'''Given an unsorted integer array nums. Return the smallest positive integer that is not present in nums.
+You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space. 
+Constraints:
+1 <= nums.length <= 105
+-231 <= nums[i] <= 231 - 1'''
