@@ -1434,3 +1434,17 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 Constraints:
 The number of nodes in the tree is in the range [0, 104].
 -100 <= Node.val <= 100'''
+from collections import deque
+
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root: return 0
+        q = deque([root])
+        depth = 0
+        while q:
+            depth += 1
+            for _ in range(len(q)):
+                node = q.popleft()
+                if node.left: q.append(node.left)
+                if node.right: q.append(node.right)
+        return depth
